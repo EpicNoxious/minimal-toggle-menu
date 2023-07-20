@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "GeneralSans";
+  src: url("./GeneralSans-Regular.otf");
+}
+
+html {
+  font-size: 62.5%; /* font is now 10px not 16px */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+    overflow: hidden;
+}
+section {
+  height: 100vh;
+  width: 100%;
+  background-color: #ccc;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  .img {
+    height: 85%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+nav {
+  height: 5rem;
+  width: 5rem;
+  background-color: #fff;
+  border-radius: 5rem;
+  position: fixed;
+  top: 3vw;
+  right: 3vw;
+
+  button {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 5rem;
+    border: 0;
+    outline: 0;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: #fff;
+    cursor: pointer;
+
+    #toggleButtonLine1 {
+      content: "";
+      border: 1px solid black;
+      width: 50%;
+      top: 42.5%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      border-radius: 100px;
+    }
+    #toggleButtonLine2 {
+      content: "";
+      border: 1px solid black;
+      width: 50%;
+      top: 57.5%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      border-radius: 100px;
+    }
+  }
+  ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2vh;
+    visibility: hidden;
+    opacity: 0;
+    li {
+      width: 100%;
+      font-size: 2.4rem;
+      font-weight: 500;
+      font-family: "GeneralSans";
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      span {
+        display: inline-block;
+        scale: 0;
+        transition: all 200ms ease;
+      }
+      a {
+        display: inline-block;
+        color: #000;
+        text-decoration: none;
+      }
+      &:hover {
+        font-weight: 1000;
+        span {
+          scale: 1;
+        }
+      }
+    }
+  }
+}
